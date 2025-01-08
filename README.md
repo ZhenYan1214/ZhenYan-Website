@@ -1,5 +1,5 @@
 # 🌐 Zhenyan's Personal Website
-
+![網站預覽](website.png)
 ## 🚀 簡介  
 這是一個個人網站，展示我的背景、作品集和聯繫方式。  
 使用 **HTML**, **CSS**, 和 **JavaScript** 開發，並支援響應式設計。
