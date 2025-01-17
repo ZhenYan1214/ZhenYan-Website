@@ -188,13 +188,59 @@ header nav ul li a.active {
     max-width: 1000px; width: 100%;
 }
 
+.portfolio-container {
+    display: flex;
+    align-items: center; /* 確保按鈕和作品垂直置中 */
+    justify-content: space-between; /* 按鈕和作品區域水平分散 */
+    position: relative;
+    gap: 20px; /* 控制按鈕和內容之間的距離 */
+}
+
 .portfolio-items {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: stretch;
+    overflow: hidden; /* 防止內容被剪裁 */
+    gap: 20px; /* 設置每個項目之間的間距 */
+    justify-content: center; /* 確保項目水平居中 */
+    width: 100%; /* 父容器寬度 */
 }
+
+.portfolio-items .item {
+    min-width: 300px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* 按鈕樣式 */
+.nav-btn {
+    background-color: transparent; /* 背景透明 */
+    border: none; /* 移除邊框 */
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+#prev {
+    /* 左箭頭樣式 */
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #4f46e5;
+    margin-right: 20px; /* 左按鈕與作品的距離 */
+}
+
+#next {
+    /* 右箭頭樣式 */
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #4f46e5;
+    margin-left: 20px; /* 右按鈕與作品的距離 */
+}
+
+.nav-btn:hover {
+    filter: brightness(1.2); /* 懸停亮度效果 */
+}
+
+
 #portfolio h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -257,118 +303,90 @@ header nav ul li a.active {
 
 /* === 聯繫我區塊 === */
 #contact {
-    background: linear-gradient(to bottom, #ffffff, #f9fafb);
-    border-radius: 12px;
-    margin: 50px auto;
-    padding: 60px 20px;
-    max-width: 1000px;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box;
+    padding: 40px 20px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact h2 {
-    font-size: 2.2em;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 10px;
-    color: #333333;
-    font-weight: bold;
 }
 
 #contact p {
-    font-size: 1.1em;
-    margin-bottom: 40px;
-    color: #666666;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
 }
-
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: 100%; 
-    max-width: 1000px; 
-    box-sizing: border-box;
 }
 
-
-
 .contact-item {
-    background: #ffffff;
+    background: white;
     border-radius: 10px;
-    padding: 30px 25px;
+    padding: 20px;
     text-align: center;
-    flex: 1; 
-    max-width: calc(50% - 10px); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
 }
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+.contact-icon {
+    font-size: 2rem;
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
 
 .contact-item h3 {
-    font-size: 1.2em; 
-    margin-bottom: 10px; 
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
 }
-
 
 .contact-item p {
-    font-size: 1em;
-    margin-top: 15px; 
+    font-size: 1rem;
     color: #2563eb;
     font-weight: bold;
-    text-align: center; 
+    margin-top: 10px;
 }
+
 .contact-item p a {
     color: #2563eb;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-item p a:hover {
     color: #4f46e5;
-    text-decoration: underline;
 }
 
-.contact-item.github {
-    background: #f9fafb; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
-    text-align: center;
-}
-
-.contact-item.github p {
-    display: none;
-}
-
-.contact-item.github .contact-button {
-    background: #4f46e5;
-    color: #ffffff;
-    font-size: 1em;
-    font-weight: bold;
+.contact-button {
+    display: inline-block;
+    background-color: #4f46e5;
+    color: white !important;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.contact-item.github .contact-button:hover {
-    background: #2563eb;
+.contact-button:hover {
+    background-color: #2563eb;
     transform: translateY(-2px);
 }
 
