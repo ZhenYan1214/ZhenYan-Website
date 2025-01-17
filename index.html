@@ -53,39 +53,65 @@
     <!-- 我的作品 -->
 <section id="portfolio">
     <h2>我的作品</h2>
-    <div class="portfolio-items">
-        <!-- 專案 1 -->
-        <a href="https://github.com/ZhenYan1214/WebDashboard-Ig/tree/main" target="_blank" class="item">
-            <div class="portfolio-image">
-                <img src="ig-dataset.png" alt="專案1">
-            </div>
-            <div class="portfolio-content">
-                <h3>IG分析儀表板</h3>
-                <p>這是一個基於 Streamlit 的數據分析應用，幫助用戶篩選和分析 Instagram 帳號數據，更快速了解數據中的趨勢。</p>
-            </div>
-        </a>
+    <div class="portfolio-container">
+        <button id="prev" class="nav-btn"></button>
+        <div class="portfolio-items">
+            <!-- 專案 1 -->
+            <a href="https://github.com/ZhenYan1214/WebDashboard-Ig/tree/main" target="_blank" class="item">
+                <div class="portfolio-image">
+                    <img src="ig-dataset.png" alt="專案1">
+                </div>
+                <div class="portfolio-content">
+                    <h3>IG分析儀表板</h3>
+                    <p>這是一個基於 Streamlit 的數據分析應用，幫助用戶篩選和分析 Instagram 帳號數據，更快速了解數據中的趨勢。
 
-        <!-- 專案 2 -->
-        <a href="https://github.com/ZhenYan1214/ClassWork" target="_blank" class="item">
-            <div class="portfolio-image">
-                <img src="test.png" alt="專案2">
-            </div>
-            <div class="portfolio-content">
-                <h3>澎湖模型視覺化</h3>
-                <p>這是一個澎湖的旅遊人流圖，可以檢閱各月份的人流量和溫度、濕度。</p>
-            </div>
-        </a>
+                    </p>
+                </div>
+            </a>
 
-        <!-- 專案 3 -->
-        <a href="https://github.com/ZhenYan1214/My-Titanic-solution" target="_blank" class="item">
-            <div class="portfolio-image">
-                <img src="kaggle-titanic.jpg" alt="專案3">
-            </div>
-            <div class="portfolio-content">
-                <h3>Titanic Dataset</h3>
-                <p>這是第一次使用Kaggle處理的Dataset，詳細解釋了每個步驟。</p>
-            </div>
-        </a>
+            <!-- 專案 2 -->
+            <a href="https://github.com/ZhenYan1214/ClassWork" target="_blank" class="item">
+                <div class="portfolio-image">
+                    <img src="test.png" alt="專案2">
+                </div>
+                <div class="portfolio-content">
+                    <h3>澎湖模型視覺化</h3>
+                    <p>這是一個澎湖的旅遊人流圖，可以檢閱各月份的人流量和溫度、濕度。</p>
+                </div>
+            </a>
+
+            <!-- 專案 3 -->
+            <a href="https://github.com/ZhenYan1214/My-Titanic-solution" target="_blank" class="item">
+                <div class="portfolio-image">
+                    <img src="kaggle-titanic.jpg" alt="專案3">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Titanic Dataset</h3>
+                    <p>這是第一次使用Kaggle處理的Dataset，詳細解釋了每個步驟。</p>
+                </div>
+            </a>
+            <!-- 專案 4 -->
+            <a href="https://github.com/ZhenYan1214/digit-recognizer-solution" target="_blank" class="item">
+                <div class="portfolio-image">
+                    <img src="Digit recognizer.png" alt="專案4">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Digit-Recognizer</h3>
+                    <p>第二次進行Kaggle，詳細解釋每個步驟</p>
+                </div>
+            </a>
+            <!-- 專案 5 -->
+            <a href="https://github.com/ZhenYan1214/Simple-psychologicalTest" target="_blank" class="item">
+                <div class="portfolio-image">
+                    <img src="test 心理.png" alt="專案5">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Ai心理測驗</h3>
+                    <p> 一個基於 HTML 和 JavaScript 的 AI 心理測驗生成器</p>
+                </div>
+            </a>
+        </div>
+        <button id="next" class="nav-btn"></button>
     </div>
 </section>
 
@@ -94,17 +120,25 @@
         <h2>聯繫我</h2>
         <p>歡迎透過以下方式聯絡我：</p>
         <div class="contact-container">
+            <!-- Email Card -->
             <div class="contact-item">
-                <h3>Email 📧</h3>
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
                 <p><a href="mailto:zhenyan0731@gmail.com">zhenyan0731@gmail.com</a></p>
             </div>
-            <div class="contact-item github">
-                <h3>GitHub 💻</h3>
-                <a href="https://github.com/ZhenYan1214" class="contact-button" target="_blank">前往 GitHub</a>
+            <!-- GitHub Card -->
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/ZhenYan1214" target="_blank" class="contact-button">前往 GitHub</a></p>
             </div>
         </div>
-        
     </section>
+    
     
     
     
